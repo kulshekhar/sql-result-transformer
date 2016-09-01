@@ -6,8 +6,6 @@ dist: trusty
 
 go:
   - 1.6.3
-  - 1.7
-  - tip
 
 services:
   - postgresql
@@ -19,8 +17,6 @@ before_script:
   - psql -c "CREATE USER test WITH PASSWORD 'test';"
   - psql -c "CREATE DATABASE test;"
 
-install:
-  - go get github.com/constabulary/gb/...
-  - gb vendor fetch
+install: go get -t ./src/...
 
-script: gb test -v
+script: go test -v ./src/...
