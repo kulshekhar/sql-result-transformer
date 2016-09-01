@@ -1,3 +1,7 @@
+pkg
+vendor/**/*
+!vendor/manifest
+
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
 *.o
 *.a
