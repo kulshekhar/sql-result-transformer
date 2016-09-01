@@ -21,6 +21,6 @@ before_script:
 
 install:
   - go get github.com/constabulary/gb/...
-  - gb fetch
+  - gb vendor fetch
 
 script: gb test -v
