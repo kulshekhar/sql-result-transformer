@@ -21,6 +21,6 @@ before_script:
 
 install:
   - go get github.com/constabulary/gb/...
-  - gb restore
+  - gb vendor restore
 
 script: gb test -v 
