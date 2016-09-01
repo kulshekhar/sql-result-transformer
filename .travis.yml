@@ -19,6 +19,8 @@ before_script:
   - psql -c "CREATE USER test WITH PASSWORD 'test';"
   - psql -c "CREATE DATABASE test;"
 
-install: go get github.com/constabulary/gb/...
+install:
+  - go get github.com/constabulary/gb/...
+  - gb fetch
 
 script: gb test -v
